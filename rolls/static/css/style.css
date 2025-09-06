@@ -1,0 +1,11 @@
+.cards_order{
+    transition: transform 0.6s ease;
+}
+
+.cards_order:hover{
+   transform: scale(1.02);
+}
+
+footer{
+    margin-top: 400px;
+}

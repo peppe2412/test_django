@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html lang="en">
 
@@ -9,6 +11,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <title>Fullstack Sushi</title>
 </head>
@@ -24,9 +28,32 @@
             </a>
         </div>
     </nav>
-   
+
     {% block content %}
     {% endblock %}
+
+    <footer class="container-fluid bg-dark p-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 text-light text-center fs-5">
+                    <p>&copy; {% now 'Y' %} <span class="fst-italic">DJANGO-TEST</span></p>
+                    <div class="d-flex flex-column">
+                        <a href="{% url 'order' %}" class="mb-2 text-decoration-underline text-light">Ordina</a>
+                        <a href="{% url 'contact' %}" class="text-decoration-underline text-light">
+                            Contattaci
+                        </a>
+                    </div>
+                </div>
+                <div class="my-5 d-flex justify-content-end">
+                    <p class="text-light fs-1" href="{% url 'home' %}">
+                        <img src="{% static 'rolls/logo.png' %}" alt="" width="100"
+                            class="d-inline-block align-top">
+                        Fullstack Sushi
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 

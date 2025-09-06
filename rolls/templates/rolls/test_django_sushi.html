@@ -6,7 +6,7 @@
     <p class="lead">Concediti ora una favolosa pausa ricca di sapore e di carboidrati. E'
         scientificamente provato: i nostri sushi rolls ti aiutano a scrivere un codice più performante
     </p>
-    <button type="button" class="btn btn-primary">Ordina Subito!</button>
+    <a href="{% url 'order' %}" class="btn btn-primary">Ordina Subito!</a>
     <a href="{% url 'contact' %}" class="btn btn-secondary">Contattaci</a>
 </div>
 
@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <h4 class="card-title">{{roll.name}}</h4>
                         <h5 class="card-title">Prezzo: €{{roll.price}}</h5>
-                        <a href="#" class="btn btn-primary">Acquista</a>
+                        <a href="{% url 'order-show' roll.pk %}" class="btn btn-primary">Acquista</a>
                     </div>
                 </div>
             </div>
