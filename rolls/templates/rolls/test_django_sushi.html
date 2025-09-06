@@ -20,6 +20,7 @@
                     <div class="card-body">
                         <h4 class="card-title">{{roll.name}}</h4>
                         <h5 class="card-title">Prezzo: €{{roll.price}}</h5>
+                        <p>{{roll.description}}</p>
                         <a href="{% url 'order-show' roll.pk %}" class="btn btn-primary">Acquista</a>
                     </div>
                 </div>

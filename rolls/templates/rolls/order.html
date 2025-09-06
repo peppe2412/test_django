@@ -15,7 +15,7 @@
         {% for roll in rolls %}
         <div class="col-12 col-md-6">
             <a href="{% url 'order-show' roll.pk %}" class="text-decoration-none text-dark">
-                <div class="card mb-3 cards_order">
+                <div class="card mb-3 cards_order p-3">
                     <div class="row g-0">
                         <div class="col-12 col-md-4">
                             <img src="{{roll.img.url}}" class="img-fluid" alt="{{roll.name}}">
@@ -24,6 +24,9 @@
                             <div class="card-body">
                                 <h4 class="card-title">{{roll.name}}</h4>
                                 <h5 class="card-title">€{{roll.price}}</h5>
+                                <p class="lead">
+                                    {{roll.description}}
+                                </p>
                             </div>
                         </div>
                     </div>
