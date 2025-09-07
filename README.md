@@ -18,11 +18,11 @@ Alcuni dei principali comandi sono:
 
 - py manage.py startapp rolls => per creare l'app
 
-- python manage.py runserve => serve per aprire il progetto nel browser
+- python manage.py runserver => serve per aprire il progetto nel browser
 
 - python manage.py makemigrations => creare migrazione
 
-- python manage.py migrate => applicare le migrazioni create
+- python manage.py migrate => applicare le migrazioni create (consigliato farlo, anche, quando si riapre il progetto)
 
 - py manage.py createsuperuser => serve per creare un utente admin
 
